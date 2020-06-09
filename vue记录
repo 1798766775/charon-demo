@@ -1,0 +1,21 @@
+1.在安装bootstrap之前，需要先安装juqery
+   npm install --save jquery
+2.然后安装bootstrap
+   cnpm install bootstrap -S
+3.在main.js中添加引入依赖
+	//引入jquery
+	import $ from 'jquery'
+	//引入bootstrap
+	import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+	import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+
+
+4.使用less报错：（官方Sass Loader的引入方法）
+   是因为使用了<style lang="less" scoped></style>
+   //在项目下，运行下列命令行
+	npm install less less-loader --save
+	//因为sass-loader依赖于node-sass，所以还要安装node-sass
+	npm install --save-dev node-sass
+   需要的时间有点久
+   
+   报错的解决方法：https://blog.csdn.net/shujiaw/article/details/105863069
